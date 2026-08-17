@@ -1,3 +1,4 @@
+# ec2 variables
 variable "instance_names" {
     type = list
     default = ["db","backend","frontend"]
@@ -20,7 +21,8 @@ variable "common_tags" {
         Terraform = "true"
     }
 }
-
+  
+  # sg variables
 variable "sg_name" {
     default = "allow_ssh"
 }
@@ -40,4 +42,14 @@ variable "protocol" {
 variable "allowed_cidr" {
     type = list(string)
     default = ["0.0.0.0/0"]
+}
+
+
+#r53 variables
+variable "zone_id" {
+    default = "Z0870498TZATRMMR1SZ3"
+}
+
+variable "domain_name" {
+    default = "venkymadhumanchi.shop"
 }
